@@ -1,0 +1,19 @@
+.footer {
+    background-image: linear-gradient(45deg, rgb(35, 33, 33) 0%, rgb(64, 61, 61) 20%, rgb(64, 61, 61) 80%, rgb(35, 33, 33) 100%);
+}
+
+.footer__list {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;    
+    margin: 0 auto;
+    height: 80px;
+    /* background-image: linear-gradient(45deg, rgb(35, 33, 33) 0%, #292c31 20%, #292c31 80%, rgb(35, 33, 33) 100%); */
+}
+
+.footer__item {
+    /* margin: 0 10px; */
+    text-align: center;
+}
