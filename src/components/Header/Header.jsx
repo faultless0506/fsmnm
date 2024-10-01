@@ -7,7 +7,6 @@ export default function Header() {
     setIsMenuOpen(!isMenuOpen)
   }
   return (
-    <div>
       <header className="header">
         <div className="header__bar-top"></div>
         <div className="header__bar container">
@@ -29,7 +28,7 @@ export default function Header() {
                 />
               </div>
               <li className="header__nav-item">
-                <a href="/">Федерация</a>
+              <a href="/" className="slide-btns slide-d-right">Федерация</a>
                 <ul className="header__nav-sublist">
                   <li className="header__nav-sublist-item">
                     <a href="#!">О виде спорта</a>
@@ -52,21 +51,21 @@ export default function Header() {
                 </ul>
               </li>
 
-              <li className="header__nav-item">Новости</li>
+              <li className="header__nav-item"><a href="/news" className="slide-btns slide-d-right">Новости</a></li>
               <li className="header__nav-item">
-                <a href="/competitions">Соревнования</a>
+              <a href="/news" className="slide-btns slide-d-right">Новости</a>
               </li>
-              <li className="header__nav-item">Спортсмены</li>
-              <li className="header__nav-item">Занятия</li>
+              <li className="header__nav-item"><a href="/news" className="slide-btns slide-d-right">Новости</a></li>
+              <li className="header__nav-item"><a href="/news" className="slide-btns slide-d-right">Новости</a></li>
             </ul>
           </nav>
           <div className="header__contacts">
             <a href="https://vk.com/mfsmn">VK</a>
           </div>
+          {/* <div className="header__void"></div> */}
         </div>
 
         <div className="header__bar-bottom"></div>
       </header>
-    </div>
   );
 }
