@@ -16,6 +16,8 @@
 a, a:link, a:visited  {
     text-decoration: none;
 	/* color:rgb(207, 56, 56) */
+
+	animation: none;
 }
 
 a:hover  {
