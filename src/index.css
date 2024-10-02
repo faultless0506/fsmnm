@@ -35,7 +35,7 @@ html {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  background-image: url('./../public/img/bg_knifes_box_1_norm.png');
+  background-image: url("./../public/img/bg_knifes_box_1_norm.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -47,18 +47,21 @@ html {
   }
 }
 
-
 .content__top h1 {
   padding-top: 3em;
   @media (max-width: 1100px) {
-    padding-top: 1em
+    padding-top: 1em;
   }
 }
 
 .content__main {
   width: 80%;
   max-width: 1200px;
-  padding: 50px;
+  padding: 1.5rem 2.5rem;
+  @media (max-width: 1100px) {
+    padding:  .5rem 1.5rem;
+    
+  };
   box-sizing: border-box;
   margin: 50px auto;
   background-image: linear-gradient(
@@ -70,18 +73,11 @@ html {
     rgba(0, 0, 0, 0) calc(100% - 20px),
     rgba(0, 0, 0, 0) 100%
   );
-
 }
 
-
 .slide-btns {
-	position: relative;
-  /* color: #fff; */
-  /* font-size: 0.950em; */
-  /* text-transform:  uppercase; */
-  /* background: rgb(64, 61, 61); */
-  /* border: 1px solid #527c82; */
-  padding: 0 1em;
+  position: relative;
+  /* padding: 0 1em; */
   /* margin: 15px;   */
   /* z-index: 1; */
   overflow: hidden;
@@ -91,48 +87,89 @@ html {
   /* height: 100%; */
   display: flex;
   align-items: center;
-
+  justify-content: center;
+  @media (max-width: 1100px) {
+    justify-content: flex-start;
+    padding-left: 30px;
+  }
+  text-shadow: 0 0 3px rgb(35, 33, 33);
 }
 .slide-btns:hover {
-  color: rgb(207, 56, 56);;
-  text-decoration: none;
+  color: rgb(207, 56, 56);
+  /* text-decoration: underline; */
   position: relative;
   z-index: 2;
+  /* background-image: linear-gradient(100deg, transparent 0%, transparent 5px, #333 50%, #333 100%); */
+  transform: skewX(-20deg);
+   /* transition: 0.3s ease-in-out; */
 }
 .slide-btns:hover a {
+  /* transform: skewX(20deg); */
   position: relative;
-  top: 1px;
+    position: relative;
+  z-index: 1;
 
+}
+.slide-btns:hover span {
+  /* transform: skewX(20deg); */
+  /* transform: none; */
 
+  /* transition: none; */
 
+  position: relative;
+  z-index: 1;
+  transform: skewX(20deg); 
+  will-change: transform;
+  /* transition: 0.2s ; */
 }
 .slide-btns::after {
   content: "";
-  /* background: rgb(35, 33, 33); */
-  background-image: linear-gradient(35deg, rgba(35, 33, 33, 0) 20%, rgb(35, 33, 33) 20%, rgb(35, 33, 33) 80%, rgba(35, 33, 33, 0) 80%);
+  background: rgb(35, 33, 33);
+  /* color: royalblue; */
+  /* background-image: linear-gradient(
+    135deg,
+    rgba(35, 33, 33, 0) 5px,
+    rgb(35, 33, 33) 5px,
+    rgb(35, 33, 33) calc(100% - 5px),
+    rgba(35, 33, 33, 0) calc(100% - 5px),
+  ); */
+
   position: absolute;
   z-index: -1;
 
   display: block;
+  
+}
+.slide-btns span {
+  /* color: royalblue; */
+  /* transform: none; */
 }
 .slide-btns[class^="slide"]::after {
-  transition: all 0.60s;
+  transition: all 0.6s;
+  
+  /* color: aqua; */
 }
 .slide-btns[class^="slide"]:hover::after {
   left: 0;
   right: 0;
   top: 0;
   bottom: 0;
-  transition: all 0.60s;
+  transition:  0.5s;
+  /* perspective: 1000px; */
+  
+  
+  backface-visibility: hidden;
+  /* color: royalblue; */
 }
 .slide-btns.slide-d-right::after {
   left: -20%;
   right: -20%;
   top: 0;
   bottom: 0;
-  transform: skewX(-45deg) scale(0, 1);
+  transform: skewX(0deg) scale(0, 1);
+  /* color: royalblue; */
 }
 .slide-btns.slide-d-right:hover::after {
-  transform: skewX(-45deg) scale(2, 2);
+  transform: skewX(0deg) scale(2, 2);
 }
 
