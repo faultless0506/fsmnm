@@ -16,15 +16,17 @@ html {
   line-height: 1rem;
 }
 
-.header a {
-  /* color: #c92d32; */
-  color: rgb(209, 196, 196);
-}
+.header a,
 .header li {
-  text-shadow: 0px 0px 0.2em rgb(247, 241, 241),
-    0px 0px 0.4em rgb(236, 231, 231);
-}
+  color: rgb(209, 196, 196);
 
+  text-shadow: 0px 0px 0.4em rgb(0, 0, 0);
+  @media (max-width: 1100px) {
+    
+    text-shadow: 0px 0px 0.1em rgb(0, 0, 0);
+    
+  }
+}
 h1 {
   /* color: rgb(209, 196, 196); */
   font-size: 2.5rem;

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Header.css";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -28,51 +29,61 @@ export default function Header() {
                 className="header__logo-mobile"
               />
             </div>
-            <li className="header__nav-item">
-              <a href="/" className="slide-btns slide-d-right">
-                <span>Федерация</span>
-              </a>
+            <li className="header__nav-item sublist slide-btns slide-d-right">
+              <Link to="/">Федерация</Link>
               <ul className="header__nav-sublist">
                 <li className="header__nav-sublist-item">
-                  <a href="#!">О виде спорта</a>
+                  <Link to="/">О виде спорта</Link>
                 </li>
                 <li className="header__nav-sublist-item">
-                  <a href="#!">Руководство</a>
+                  <Link to="/">подменю 2</Link>
                 </li>
                 <li className="header__nav-sublist-item">
-                  <a href="#!">Попечитеельский совет</a>
+                  <Link to="/">подменю 2</Link>
                 </li>
                 <li className="header__nav-sublist-item">
-                  <a href="#!">Документы</a>
+                  <Link to="/">подменю 3</Link>
                 </li>
                 <li className="header__nav-sublist-item">
-                  <a href="#!">Контакты</a>
+                  <Link to="/">подменю 4</Link>
                 </li>
                 <li className="header__nav-sublist-item">
-                  <a href="#!">Партнеры</a>
+                  <Link to="/">подменю 5</Link>
                 </li>
               </ul>
             </li>
 
-            <li className="header__nav-item">
-              <a href="/news" className="slide-btns slide-d-right">
-                <span>123Новости</span>
-              </a>
+            <li className="header__nav-item slide-btns slide-d-right">
+              <Link to="#!">меню 2</Link>
             </li>
-            <li className="header__nav-item">
-              <a href="/news" className="slide-btns slide-d-right">
-              <span>Новости</span>
-              </a>
+            <li className="header__nav-item slide-btns slide-d-right">
+              <Link to="#!">меню 3</Link>
             </li>
-            <li className="header__nav-item">
-              <a href="/news" className="slide-btns slide-d-right">
-              <span>Новости</span>
-              </a>
+            <li className="header__nav-item  slide-btns slide-d-right">
+              <Link to="#!">меню 4</Link>
             </li>
-            <li className="header__nav-item">
-              <a href="/news" className="slide-btns slide-d-right">
-              <span>Новости</span>
-              </a>
+            <li className="header__nav-item  slide-btns slide-d-right">
+              <Link to="/competitions">меню 5</Link>
+              <ul className="header__nav-sublist">
+                <li className="header__nav-sublist-item">
+                  <Link to="/">О виде спорта</Link>
+                </li>
+                <li className="header__nav-sublist-item">
+                  <Link to="/">подменю 2</Link>
+                </li>
+                <li className="header__nav-sublist-item">
+                  <Link to="/">подменю 2</Link>
+                </li>
+                <li className="header__nav-sublist-item">
+                  <Link to="/">подменю 3</Link>
+                </li>
+                <li className="header__nav-sublist-item">
+                  <Link to="/">подменю 4</Link>
+                </li>
+                <li className="header__nav-sublist-item">
+                  <Link to="/">подменю 5</Link>
+                </li>
+              </ul>
             </li>
           </ul>
         </nav>

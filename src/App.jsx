@@ -12,6 +12,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/competitions" element={<Competitions />} />
+          <Route path="/*" element={<Home />} />
         </Routes>
       </BrowserRouter>
       <Footer />

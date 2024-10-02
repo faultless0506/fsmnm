@@ -1,16 +1,11 @@
 .header {
   width: 100%;
   height: 130px;
-
-  /* border-bottom: #e9e9e9 1px solid; */
-
-  /* flex-direction: column; */
   position: fixed;
   top: 0;
   z-index: 50;
   align-content: center;
   background-color: rgb(35, 33, 33);
-
 }
 
 .header__bar {
@@ -24,7 +19,7 @@
     110deg,
     rgb(35, 33, 33) 250px,
     rgb(64, 61, 61) 250px,
-    /* rgb(64, 61, 61) 50%, */ rgb(64, 61, 61) calc(100% - 150px),
+    rgb(64, 61, 61) calc(100% - 150px),
     rgb(35, 33, 33) calc(100% - 150px)
   );
   @media (max-width: 1100px) {
@@ -32,20 +27,15 @@
       110deg,
       rgb(35, 33, 33) 130px,
       rgb(64, 61, 61) 130px,
-      /* rgb(64, 61, 61) 50%, */ rgb(64, 61, 61) calc(100% - 130px),
+      rgb(64, 61, 61) calc(100% - 130px),
       rgb(35, 33, 33) calc(100% - 130px)
     );
   }
 }
-/* .header__void {
-  display: none;
-} */
 .header__nav {
-  /* width: 70%; */
   display: flex;
   align-items: stretch;
   justify-content: space-evenly;
-
   @media (min-width: 1100px) {
     width: 70%;
   }
@@ -54,18 +44,27 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-  /* gap: auto; */
   align-items: center;
 }
 
 .header__nav-item {
   height: 100%;
-width: 100%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+.sublist a {
+  content: " asdasd";
+ background-image: url("./../../../public/img/chevron-down.svg");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 0.5rem;
+  margin-right: 15px;
+  margin-left: auto;
+  /* position: relative; */
+}
 
 .header__logo {
   max-width: 130px;
@@ -76,9 +75,7 @@ width: 100%;
 }
 
 .header__contacts {
-
   align-self: center;
-
 }
 .header__burger {
   display: none;
@@ -174,7 +171,7 @@ width: 100%;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    padding: 2rem 0 1.5rem 0;
+    padding: 2rem 0 1rem 0;
     margin: 0 auto 0 0;
     gap: 0;
     width: 100%;
@@ -194,29 +191,30 @@ width: 100%;
   }
   .header__nav-item {
     width: 100%;
+    height: 100%;
+    max-height: 80px;
     /* height: 3rem; */
     margin: 0;
-    padding: 1.5rem 0rem;
+    padding: 0rem 0rem;
     /* margin-bottom: 0rem; */
     border-bottom: gray 1px solid;
   }
+  .header__nav-item:last-child {
+    border-bottom: none;
+  }
 
-
-  
-  
   .header__nav-mobile-logo {
     display: flex;
     width: 100%;
-    max-width: 170px;
-    max-height: 140px;
+    max-width: 200px;
+    max-height: 180px;
     height: 100%;
-    padding-left: 30px;
+    padding-left: 20px;
     /* align-self: center; */
   }
   .header__burger.active + .header__logo {
     display: none;
   }
-
 }
 @media (max-width: 600px) {
 }
