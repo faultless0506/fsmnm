@@ -7,6 +7,10 @@ export default function Header() {
   const handleBurgerClick = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+  const [isSublistOpen, setIsSublistOpen] = useState(false);
+  const handleSublistClick = () => {
+    setIsSublistOpen(!isSublistOpen);
+  }
   return (
     <header className="header">
       <div className="header__bar container">
@@ -29,9 +33,9 @@ export default function Header() {
                 className="header__logo-mobile"
               />
             </div>
-            <li className="header__nav-item sublist slide-btns slide-d-right">
-              <Link to="/">Федерация</Link>
-              <ul className="header__nav-sublist">
+            <li className="header__nav-item slide-btns slide-d-right ">
+              <Link  onClick={handleSublistClick}>Федерация</Link>
+              <ul className="header__nav-sublist ">
                 <li className="header__nav-sublist-item">
                   <Link to="/">О виде спорта</Link>
                 </li>
@@ -62,8 +66,8 @@ export default function Header() {
             <li className="header__nav-item  slide-btns slide-d-right">
               <Link to="#!">меню 4</Link>
             </li>
-            <li className="header__nav-item  slide-btns slide-d-right">
-              <Link to="/competitions">меню 5</Link>
+            <li className="header__nav-item slide-btns slide-d-right">
+              <Link >меню 5</Link>
               <ul className="header__nav-sublist">
                 <li className="header__nav-sublist-item">
                   <Link to="/">О виде спорта</Link>
@@ -84,6 +88,7 @@ export default function Header() {
                   <Link to="/">подменю 5</Link>
                 </li>
               </ul>
+              
             </li>
           </ul>
         </nav>

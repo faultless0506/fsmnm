@@ -21,6 +21,7 @@ html {
   align-items: center;
   justify-content: center;
   width: 100%;
+  z-index: 1;
   background-color: #515151;
   /* background-image: linear-gradient(
     to right,
@@ -32,11 +33,12 @@ html {
 
 .content__top {
   display: flex;
+  z-index: 1;
   flex-direction: column;
   align-items: center;
   width: 100%;
   background-image: url("./../public/img/bg_knifes_box_1_norm.png");
-  background-size: cover;
+  /* background-size: cover; */
   background-repeat: no-repeat;
   background-position: center;
   padding: 10px 10px;
@@ -58,9 +60,7 @@ html {
   width: 80%;
   max-width: 1200px;
   padding: 1.5rem 2.5rem;
-  @media (max-width: 1100px) {
-    padding: 0.5rem 1.5rem;
-  }
+
   box-sizing: border-box;
   margin: 50px auto;
   background-image: linear-gradient(
@@ -72,11 +72,15 @@ html {
     rgba(0, 0, 0, 0) calc(100% - 20px),
     rgba(0, 0, 0, 0) 100%
   );
+  @media (max-width: 1100px) {
+    padding: 0.5rem 1.5rem;
+  }
 }
 
 .slide-btns {
   position: relative;
-  overflow: hidden;
+  overflow: inherit;
+  background-size: contain;
   width: 100%;
   height: 100%;
   display: flex;
@@ -85,10 +89,12 @@ html {
   @media (max-width: 1100px) {
     justify-content: flex-start;
     padding-left: 40px;
+    overflow: hidden;
   }
 }
 
-.slide-btns a {
+.slide-btns a,
+.slide-btns span {
   width: 100%;
   height: 100%;
   display: flex;
@@ -102,22 +108,33 @@ html {
 
 .slide-btns:hover {
   position: relative;
-transform: skewX(-20deg);
+  transform: skewX(-10deg);
+  @media (max-width: 1100px) {
+    transform: none;
+  }
 }
-.slide-btns:hover a {
+.slide-btns:hover a,
+.slide-btns:hover span {
   color: rgb(207, 56, 56);
   position: relative;
-  transform: skewX(20deg);
+  transform: skewX(10deg);
   will-change: transform;
+
+  @media (max-width: 1100px) {
+    transform: none;
+  }
 }
+
 .slide-btns::after {
   content: "";
   position: absolute;
   z-index: -1;
   display: block;
-  background: rgb(35, 33, 33);
-  transition: transform 0.6s;
+  /* transform-origin: left top; */
+  background-color: rgb(35, 33, 33);
+  transition: transform 0.3s;
   will-change: transform;
+
 }
 
 /* .slide-btns[class^="slide"]::after {
@@ -136,8 +153,8 @@ transform: skewX(-20deg);
   right: -20%;
   top: 0;
   bottom: 0;
-  transform: skewX(0deg) scale(0, 1);
+  transform: skewX(0deg) scale(0, 0);
 }
 .slide-btns.slide-d-right:hover::after {
-  transform: skewX(0deg) scale(2, 2);
+  transform: skewX(0deg) scale(0.7, 1);
 }
