@@ -22,13 +22,14 @@ html {
   justify-content: center;
   width: 100%;
   z-index: 1;
-  background-color: #515151;
-  /* background-image: linear-gradient(
-    to right,
-    rgb(131, 106, 106) 0%,
-    #f7e6e6 15%,
-    #f7e6e6  85%,
-    rgb(131, 106, 106) 100%) */
+  background-color: rgb(94, 93, 93);
+}
+.content ul {
+  padding-left: 1rem;
+}
+
+.content p {
+  padding-top: 1rem;
 }
 
 .content__top {
@@ -37,11 +38,12 @@ html {
   flex-direction: column;
   align-items: center;
   width: 100%;
+  background-color: #515151;
   background-image: url("./../public/img/bg_knifes_box_1_norm.png");
   /* background-size: cover; */
   background-repeat: no-repeat;
   background-position: center;
-  padding: 10px 10px;
+  padding: .5rem;
   height: 400px;
   text-align: center;
   @media (max-width: 1100px) {
@@ -62,7 +64,7 @@ html {
   padding: 1.5rem 2.5rem;
 
   box-sizing: border-box;
-  margin: 50px auto;
+  margin: 2.5rem auto;
   background-image: linear-gradient(
     135deg,
     rgba(0, 0, 0, 0) 0%,
@@ -79,7 +81,7 @@ html {
 
 .slide-btns {
   position: relative;
-  overflow: inherit;
+  /* overflow: inherit; */
   background-size: contain;
   width: 100%;
   height: 100%;
@@ -88,7 +90,7 @@ html {
   justify-content: center;
   @media (max-width: 1100px) {
     justify-content: flex-start;
-    padding-left: 40px;
+    padding-left: 2rem;
     overflow: hidden;
   }
 }
@@ -102,13 +104,12 @@ html {
   justify-content: center;
   @media (max-width: 1100px) {
     justify-content: flex-start;
-    padding-left: 35px;
+    padding-left: 1.75rem;
   }
 }
 
 .slide-btns:hover {
   position: relative;
-  transform: skewX(-10deg);
   @media (max-width: 1100px) {
     transform: none;
   }
@@ -117,37 +118,30 @@ html {
 .slide-btns:hover span {
   color: rgb(207, 56, 56);
   position: relative;
-  transform: skewX(10deg);
-  will-change: transform;
-
   @media (max-width: 1100px) {
     transform: none;
   }
 }
+.slide-btns:hover .header__nav-sublist a {
+  color: rgb(209, 196, 196);
+}
 
+.slide-btns:hover .header__nav-sublist-item:hover a {
+  color: rgb(207, 56, 56);
+
+}
 .slide-btns::after {
   content: "";
   position: absolute;
   z-index: -1;
   display: block;
-  /* transform-origin: left top; */
   background-color: rgb(35, 33, 33);
   transition: transform 0.3s;
   will-change: transform;
 
 }
 
-/* .slide-btns[class^="slide"]::after {
-  transition: 0.6s;
-} */
-/* .slide-btns[class^="slide"]:hover::after {
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  transition: 3s;
-  backface-visibility: hidden;
-} */
+
 .slide-btns.slide-d-right::after {
   left: -20%;
   right: -20%;
@@ -157,4 +151,8 @@ html {
 }
 .slide-btns.slide-d-right:hover::after {
   transform: skewX(0deg) scale(0.7, 1);
+}
+
+.active_link {
+  color: rgb(207, 56, 56);
 }

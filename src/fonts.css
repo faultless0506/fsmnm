@@ -20,14 +20,22 @@ html {
 .header li {
   color: rgb(209, 196, 196);
 
-  text-shadow: 0px 0px 0.4em rgb(0, 0, 0);
+  text-shadow: 0px 0px 0.2em rgb(0, 0, 0);
   @media (max-width: 1100px) {
-    
     text-shadow: 0px 0px 0.1em rgb(0, 0, 0);
-    
   }
 }
-h1 {
+.header__nav-sublist {
+  font-size: 0.75rem;
+  line-height: 3em;
+}
+.footer__item {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  color: rgb(209, 196, 196);
+}
+
+.content h1 {
   /* color: rgb(209, 196, 196); */
   font-size: 2.5rem;
   line-height: 1em;
@@ -39,20 +47,33 @@ h1 {
     margin-top: 40px;
   }
 }
+.content li {
+  list-style-type: disc;
+}
 
-p {
+.content p {
   text-shadow: 0px 0px 0.1em rgb(31, 30, 30);
   /* text-shadow: none; */
   @media (max-width: 600px) {
     font-size: 0.75rem;
   }
 }
+.post h2 {
+  font-size: 1.5rem;
+  line-height: 2em;
+  }
 
-.footer__item {
+.post p {
   font-size: 0.75rem;
-  line-height: 1rem;
-  color: rgb(209, 196, 196);
+  text-shadow: 0px 0px 0.1em rgb(31, 30, 30);
 }
+.post span {
+  font-size: 0.5rem;
+  line-height: normal;
+}
+
+
+
 
 .header__contacts {
 }
