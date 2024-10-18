@@ -7,7 +7,6 @@ import News from "./pages/News/News";
 import ScrollToTop from "./components/scrollToTop";
 
 function App() {
-
   return (
     <div className="App">
       <BrowserRouter>
