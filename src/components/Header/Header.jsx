@@ -7,7 +7,10 @@ export default function Header() {
   const handleBurgerClick = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-
+  const handleCloseMenu = () => {
+    setIsMenuOpen(false);
+  };
+  
   return (
     <header className="header">
       <div className="header__bar container">
@@ -22,10 +25,10 @@ export default function Header() {
           alt="logo"
           className="header__logo"
         />
-        <nav className="header__nav">
+        <nav className={`header__nav ${isMenuOpen ? "open" : ""}`}>
           <ul
             className={`header__nav-list ${isMenuOpen ? "open" : ""}`}
-            onClick={handleBurgerClick}
+            // onClick={handleBurgerClick}
           >
             <div className="header__nav-mobile-logo">
               <img
@@ -34,59 +37,87 @@ export default function Header() {
                 className="header__logo-mobile"
               />
             </div>
-            <li className="header__nav-item slide-btns slide-d-right " >
-              <NavLink to="/">Федерация</NavLink>
+            <li className="header__nav-item slide-btns slide-d-right ">
+              <span>Федерация</span>
               <ul className="header__nav-sublist ">
                 <li className="header__nav-sublist-item">
-                  <Link to="/">О виде спорта</Link>
+                  <Link to="/" onClick={handleCloseMenu}>
+                    О виде спорта
+                  </Link>
                 </li>
                 <li className="header__nav-sublist-item">
-                  <Link to="/">подменю 2</Link>
+                  <Link to="/" onClick={handleCloseMenu}>
+                    подменю 2
+                  </Link>
                 </li>
                 <li className="header__nav-sublist-item">
-                  <Link to="/">подменю 2</Link>
+                  <Link to="/" onClick={handleCloseMenu}>
+                    подменю 3
+                  </Link>
                 </li>
                 <li className="header__nav-sublist-item">
-                  <Link to="/">подменю 3</Link>
+                  <Link to="/" onClick={handleCloseMenu}>
+                    подменю 4
+                  </Link>
                 </li>
                 <li className="header__nav-sublist-item">
-                  <Link to="/">подменю 4</Link>
+                  <Link to="/" onClick={handleCloseMenu}>
+                    подменю 5
+                  </Link>
                 </li>
                 <li className="header__nav-sublist-item">
-                  <Link to="/">подменю 5</Link>
+                  <Link to="/" onClick={handleCloseMenu}>
+                    подменю 6
+                  </Link>
                 </li>
               </ul>
             </li>
 
             <li className="header__nav-item slide-btns slide-d-right">
-              <NavLink to="/competitions">Соревнования</NavLink>
+              <NavLink to="/competitions" onClick={handleCloseMenu}>
+                Соревнования
+              </NavLink>
             </li>
             <li className="header__nav-item slide-btns slide-d-right">
-              <Link to="/news" >Новости</Link>
+              <Link to="/news" onClick={handleCloseMenu}>
+                Новости
+              </Link>
             </li>
-            <li className="header__nav-item  slide-btns slide-d-right">
+            {/* <li className="header__nav-item  slide-btns slide-d-right">
               <Link to="/">меню 4</Link>
-            </li>
+            </li> */}
             <li className="header__nav-item slide-btns slide-d-right">
-              <Link>меню 5</Link>
+              <span>меню 5</span>
               <ul className="header__nav-sublist">
                 <li className="header__nav-sublist-item">
-                  <Link to="/">О виде спорта</Link>
+                  <Link to="/" onClick={handleCloseMenu}>
+                    О виде спорта
+                  </Link>
                 </li>
                 <li className="header__nav-sublist-item">
-                  <Link to="/">подменю 2</Link>
+                  <Link to="/" onClick={handleCloseMenu}>
+                    подменю 2
+                  </Link>
                 </li>
                 <li className="header__nav-sublist-item">
-                  <Link to="/">подменю 2</Link>
+                  <Link to="/" onClick={handleCloseMenu}>
+                    подменю 2
+                  </Link>
                 </li>
                 <li className="header__nav-sublist-item">
-                  <Link to="/">подменю 3</Link>
+                  <Link to="/" onClick={handleCloseMenu}>
+                    подменю 3
+                  </Link>
                 </li>
                 <li className="header__nav-sublist-item">
-                  <Link to="/">подменю 4</Link>
+                  <Link to="/" onClick={handleCloseMenu}>
+                    подменю 4
+                  </Link>
                 </li>
                 <li className="header__nav-sublist-item">
-                  <Link to="/">подменю 5</Link>
+                  <Link to="/" onClick={handleCloseMenu}>
+                    подменю 5
+                  </Link>
                 </li>
               </ul>
             </li>
