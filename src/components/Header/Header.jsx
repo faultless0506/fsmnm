@@ -1,16 +1,24 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Header.css";
 import { Link, NavLink } from "react-router-dom";
 
 export default function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const [isMenuOpen, setIsMenuOpen] = useState(() => {
+    const storedValue = localStorage.getItem("isMenuOpen");
+    return storedValue === "true" ? true : false;
+  });
+  
+  useEffect(() => {
+    localStorage.setItem("isMenuOpen", isMenuOpen.toString());
+  }, [isMenuOpen]);
   const handleBurgerClick = () => {
     setIsMenuOpen(!isMenuOpen);
   };
   const handleCloseMenu = () => {
     setIsMenuOpen(false);
   };
-  
+
   return (
     <header className="header">
       <div className="header__bar container">
