@@ -6,16 +6,8 @@
   flex-direction: column;
   justify-content: flex-start; /* center; для выравнивания по центру */
   padding: 1rem;
-  /* border: 1px solid #f20505; */
-  background-image: linear-gradient(
-    135deg,
-    rgba(35, 33, 33, 0) 15px,
-    rgb(94, 93, 93) 15px,
-    rgb(94, 93, 93) calc(100% - 15px),
-    rgba(35, 33, 33, 0) calc(100% - 15px),
-    rgba(35, 33, 33, 0) 100%
-  );
-  /* background-color:rgb(64, 61, 61); */
+  background-color: rgb(94, 93, 93);
+  border-radius: 20px;
 }
 
 .post img {
