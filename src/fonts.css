@@ -20,7 +20,7 @@ html {
 .header li {
   color: rgb(209, 196, 196);
 
-  text-shadow: 0px 0px 0.2em rgb(0, 0, 0);
+  /* text-shadow: 0px 0px 0.2em rgb(0, 0, 0); */
   @media (max-width: 1100px) {
     text-shadow: 0px 0px 0.1em rgb(0, 0, 0);
   }
@@ -41,10 +41,9 @@ html {
   line-height: 1em;
   font-weight: 700;
   text-align: center;
-  text-shadow: 0px 0px 0.1em rgb(31, 30, 30), 0px 0px 0.2em rgb(31, 30, 30);
+  /* text-shadow: 0px 0px 0.1em rgb(31, 30, 30), 0px 0px 0.2em rgb(31, 30, 30); */
   @media (max-width: 600px) {
     font-size: 1.5rem;
-    margin-top: 40px;
   }
 }
 .content li {
@@ -70,5 +69,25 @@ html {
 .post span {
   font-size: 0.5rem;
   line-height: normal;
+}
+
+.carousel__item h3{
+  color:black;
+  font-size: 0.8rem;
+  line-height: 1rem;
+
+}
+.carousel__item span{
+  color:rgb(207, 56, 56);
+  font-size: 0.5rem;
+  line-height: normal;
+}
+.home__news h2,
+.home__competitions h2 {
+  font-size: 1.5rem;
+  color: rgb(31, 30, 30);
+  font-weight: 700;
+  /* text-shadow: 0px 0px 0.1em rgb(31, 30, 30); */
+  /* line-height: 2em; */
 }
 
